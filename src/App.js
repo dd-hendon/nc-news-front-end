@@ -4,7 +4,8 @@ import { getTopics, getUsers } from "./utils/api";
 import { UserContext } from "./contexts/UserContext";
 import Header from "./components/Header";
 import Nav from "./components/Nav";
-import { Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import Articles from "./components/Articles";
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState("test-user");
@@ -20,7 +21,6 @@ function App() {
       setTopics(topics);
       setUsers(users);
       setIsLoading(false);
-      console.log(users);
     });
   }, []);
 
@@ -32,7 +32,10 @@ function App() {
         <div className="app">
           <Header />
           <Nav topics={topics} />
-          <Routes></Routes>
+          <Routes>
+            <Route path="/" element={<Articles />} />
+            <Route path="/:topic" element={<Articles />} />
+          </Routes>
         </div>
       </div>
     </UserContext.Provider>

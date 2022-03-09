@@ -43,3 +43,9 @@
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
+#filter-bar {
+  min-width: 300px;
+  min-height: 20px;
+  background-color: rgb(99, 160, 8);
+}
