@@ -5,13 +5,15 @@ import useArticles from "../hooks/useArticles";
 
 export default function Articles() {
   const { topic } = useParams();
-  const { articles, isLoading } = useArticles();
+  const { articles, isLoading } = useArticles(topic);
+
+  console.log(topic);
 
   if (isLoading) return <h2>Loading...</h2>;
 
   return (
     <main className="articles">
-      <ArticlesHeader />
+      <ArticlesHeader topic={topic} />
       <ArticlesList articles={articles} />
     </main>
   );
