@@ -6,6 +6,7 @@ export default function useArticles(topic) {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
+    setIsLoading(true);
     getArticles(topic).then((articles) => {
       setArticles(articles);
       setIsLoading(false);

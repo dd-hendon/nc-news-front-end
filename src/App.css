@@ -51,7 +51,7 @@
 #filter-bar {
   min-width: 300px;
   min-height: 20px;
-  background-color: rgb(99, 160, 8);
+  background-color: var(--nc-red);
 }
 
 #articles-list {
@@ -68,16 +68,40 @@
   background-color: white;
 }
 
+.article-card-creation-details {
+  text-align: left;
+}
+
 .article-card-title {
   text-align: left;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.article-card-creation-details {
+.article-card-engagement-details {
   text-align: left;
 }
 
-.article-card-engagement-details {
+#article-page {
+}
+
+#article-back-button {
+  min-height: 30px;
+  background-color: whitesmoke;
+}
+
+#article-main {
+  text-align: left;
+}
+#article-creation-deta {
+  text-align: left;
+}
+#article-title {
+  text-align: left;
+}
+#article-body {
+  text-align: left;
+}
+#article-comment-count {
   text-align: left;
 }

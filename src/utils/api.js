@@ -4,11 +4,19 @@ const baseURL = "https://nc-news-ddhendon.herokuapp.com/api";
 
 export const getArticles = async (topic) => {
   try {
-    let querystring = topic
-      ? `${baseURL}/articles?topic=${topic}`
-      : `${baseURL}/articles`;
-    const response = await axios.get(querystring);
+    const response = await axios.get(`${baseURL}/articles`, {
+      params: { topic: topic },
+    });
     return response.data.articles;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getArticle = async (id) => {
+  try {
+    const response = await axios.get(`${baseURL}/articles/${id}`);
+    return response.data.article;
   } catch (error) {
     console.log(error);
   }

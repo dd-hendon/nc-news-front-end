@@ -7,8 +7,6 @@ export default function Articles() {
   const { topic } = useParams();
   const { articles, isLoading } = useArticles(topic);
 
-  console.log(topic);
-
   if (isLoading) return <h2>Loading...</h2>;
 
   return (
