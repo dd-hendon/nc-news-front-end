@@ -7,8 +7,8 @@ export default function Nav() {
 
   return (
     <nav className="static-nav">
-      {topics.map((topic) => {
-        return <Topic topic={topic} />;
+      {topics.map((topic, index) => {
+        return <Topic topic={topic} key={`${index}-${topic.slug}`} />;
       })}
     </nav>
   );

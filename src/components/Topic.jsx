@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
+import Articles from "./Articles";
 
 export default function Topic({ topic }) {
-  return <strong className="topic-link">{topic.slug.toUpperCase()}</strong>;
-  //   return <Link className="topic-link">{topic.slug}</Link>;
+  const { slug } = topic;
+  return (
+    <Link to={`/${slug}`} element={<Articles />} className="topic-link">
+      <strong className="topic-link-text">{slug.toUpperCase()}</strong>
+    </Link>
+  );
 }

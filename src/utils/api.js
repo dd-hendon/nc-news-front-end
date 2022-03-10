@@ -5,7 +5,7 @@ const baseURL = "https://nc-news-ddhendon.herokuapp.com/api";
 export const getArticles = async (topic) => {
   try {
     let querystring = topic
-      ? `${baseURL}/articles/${topic}`
+      ? `${baseURL}/articles?topic=${topic}`
       : `${baseURL}/articles`;
     const response = await axios.get(querystring);
     return response.data.articles;
