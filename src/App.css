@@ -1,16 +1,49 @@
 /* .app-container {
 } */
 
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a:link,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: rgb(134, 133, 133);
+}
+
+#static-title:link,
+#static-title:hover,
+#static-title:active,
+#static-title:visited {
+  text-decoration: none;
+  color: black;
+}
+
 :root {
   --nc-red: #eb1a24;
+  --nc-grey: #f8f9f9;
+  --reddit-bluegrey: #dae0e6;
 }
 
 .app {
   text-align: center;
   max-width: 1100px;
+  min-width: 200px;
   margin: auto;
   background-color: white;
-  padding: 25px 50px;
+  padding: 0px 50px;
+}
+
+@media screen and (max-width: 700px) {
+  .app {
+    padding: 0px;
+  }
 }
 
 .static-header {
@@ -55,7 +88,7 @@
 }
 
 #articles-list {
-  background-color: lightgray;
+  background-color: var(--nc-grey);
   min-width: 300px;
 }
 
@@ -83,11 +116,28 @@
 }
 
 #article-page {
+  justify-content: center;
+  background-color: var(--nc-grey);
 }
 
 #article-back-button {
   min-height: 30px;
   background-color: whitesmoke;
+}
+
+#article {
+  margin: auto;
+  justify-content: center;
+  width: 70vw;
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 500px) {
+  #article {
+    width: fit-content;
+  }
 }
 
 #article-main {
