@@ -2,33 +2,47 @@
 } */
 
 * {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.3;
 }
 
+a:visited {
+  text-decoration: none;
+  color: var(--greyed-out);
+}
 a:link,
-a:hover,
 a:active {
   text-decoration: none;
   color: black;
 }
 
-a:visited {
-  text-decoration: none;
-  color: rgb(134, 133, 133);
+a:hover {
+  color: #eb1a24;
 }
 
-#static-title:link,
-#static-title:hover,
-#static-title:active,
-#static-title:visited {
-  text-decoration: none;
-  color: black;
+#static-title {
+  color: var(--nc-red);
+  text-decoration: underline 0.12em var(--nc-red-transparent);
+  transition: text-decoration-color 300ms;
+}
+#static-title:hover {
+  text-decoration-color: var(--nc-red);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
 }
 
 :root {
   --nc-red: #eb1a24;
+  --nc-red-transparent: #eb1a2500;
   --nc-grey: #f8f9f9;
   --reddit-bluegrey: #dae0e6;
+  --greyed-out: rgb(134, 133, 133);
 }
 
 .app {
@@ -40,7 +54,7 @@ a:visited {
   padding: 0px 50px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 525px) {
   .app {
     padding: 0px;
   }
@@ -60,7 +74,7 @@ a:visited {
 #logged-in-user-card {
   display: flex;
   align-items: center;
-  border: 1px rgb(66, 63, 63) solid;
+  border: 1px rgb(131, 123, 123) solid;
   border-radius: 5px;
   padding: 5px;
 }
@@ -73,6 +87,7 @@ a:visited {
 .user-avatar {
   width: 20px;
   border-radius: 50%;
+  filter: grayscale(1);
 }
 
 .static-nav {
@@ -85,6 +100,10 @@ a:visited {
   min-width: 300px;
   min-height: 20px;
   background-color: var(--nc-red);
+}
+
+#filter-bar-text {
+  color: white;
 }
 
 #articles-list {
@@ -103,6 +122,8 @@ a:visited {
 
 .article-card-creation-details {
   text-align: left;
+  color: var(--greyed-out);
+  font-size: 0.75em;
 }
 
 .article-card-title {
@@ -113,6 +134,7 @@ a:visited {
 
 .article-card-engagement-details {
   text-align: left;
+  color: var(--greyed-out);
 }
 
 #article-page {
@@ -143,8 +165,9 @@ a:visited {
 #article-main {
   text-align: left;
 }
-#article-creation-deta {
+#article-creation-details {
   text-align: left;
+  color: var(--greyed-out);
 }
 #article-title {
   text-align: left;
@@ -154,4 +177,5 @@ a:visited {
 }
 #article-comment-count {
   text-align: left;
+  color: var(--greyed-out);
 }
