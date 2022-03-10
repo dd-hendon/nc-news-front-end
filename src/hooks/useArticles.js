@@ -6,12 +6,11 @@ export default function useArticles(topic) {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    getArticles(topic).then((articlesFromApi) => {
-      setArticles(articlesFromApi);
-      console.log(articlesFromApi);
+    getArticles(topic).then((articles) => {
+      setArticles(articles);
       setIsLoading(false);
     });
-  }, []);
+  }, [topic]);
 
   return { articles, isLoading };
 }
