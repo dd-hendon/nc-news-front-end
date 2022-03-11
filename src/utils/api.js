@@ -22,6 +22,12 @@ export const getArticle = async (id) => {
   }
 };
 
+export const patchVotes = async (id, inc_votes) => {
+  const response = await axios.patch(`${baseURL}/articles/${id}`, {
+    inc_votes,
+  });
+};
+
 export const getUsers = async () => {
   try {
     const response = await axios.get(`${baseURL}/users`);

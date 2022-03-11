@@ -18,7 +18,7 @@ export default function ArticleMain({ article_id }) {
       </section>
       <h3 id="article-title">{title}</h3>
       <p id="article-body">{body}</p>
-      <VoteBox votes={votes} topic={topic} />
+      <VoteBox votes={votes} article_id={article_id} />
       <section id="article-comment-count">{comment_count} comments</section>
     </article>
   );
