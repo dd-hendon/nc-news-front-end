@@ -47,7 +47,7 @@ export default function CommentPost({ article_id, comments, setComments }) {
         ></textarea>
         <input
           id="comment-submit"
-          disabled={commentInput == false}
+          disabled={commentInput.length < 1}
           type="submit"
           value="Comment"
         />

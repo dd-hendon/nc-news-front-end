@@ -5,8 +5,13 @@ export default function CommentList({ comments, isLoading }) {
 
   return (
     <section id="comments-list">
-      {comments.map((comment) => {
-        return <CommentCard key={comment.comment_id} comment={comment} />;
+      {comments.map((comment, index) => {
+        return (
+          <CommentCard
+            key={`${comment.comment_id}-${index}`}
+            comment={comment}
+          />
+        );
       })}
     </section>
   );
