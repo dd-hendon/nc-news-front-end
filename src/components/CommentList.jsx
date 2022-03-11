@@ -1,9 +1,6 @@
-import useComments from "../hooks/useComments";
 import CommentCard from "./CommentCard";
 
-export default function CommentList({ article_id }) {
-  const { comments, isLoading } = useComments(article_id);
-
+export default function CommentList({ comments, isLoading }) {
   if (isLoading) return <h2>Loading...</h2>;
 
   return (
