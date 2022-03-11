@@ -28,6 +28,11 @@ export const patchVotes = async (id, inc_votes) => {
   });
 };
 
+export const getComments = async (id) => {
+  const response = await axios.get(`${baseURL}/articles/${id}/comments`);
+  return response.data.comments;
+};
+
 export const getUsers = async () => {
   try {
     const response = await axios.get(`${baseURL}/users`);
