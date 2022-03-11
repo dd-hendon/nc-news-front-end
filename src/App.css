@@ -210,3 +210,27 @@ h4 {
 .vote-error-message {
   color: #eb1a24;
 }
+
+.comment-card {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.comment-details {
+  text-align: left;
+  color: var(--greyed-out);
+  font-size: 0.75em;
+}
+
+.comment-body {
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.comment-vote-box {
+  text-align: left;
+  color: var(--greyed-out);
+}
