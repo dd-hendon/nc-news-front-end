@@ -1,16 +1,66 @@
-/* .app-container {
-} */
-
 :root {
   --nc-red: #eb1a24;
+  --nc-red-transparent: #eb1a2500;
+  --nc-grey: #f8f9f9;
+  --nc-darkgrey: #bbbbbb;
+  --reddit-bluegrey: #dae0e6;
+  --greyed-out: rgb(134, 133, 133);
+}
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.3;
+}
+
+.app-container {
+  background-color: var(--reddit-bluegrey);
+  min-height: 100vh;
 }
 
 .app {
   text-align: center;
   max-width: 1100px;
+  min-width: 200px;
+  min-height: 100vh;
   margin: auto;
-  background-color: white;
-  padding: 25px 50px;
+  background-color: whitesmoke;
+  padding: 0px 50px;
+}
+
+@media screen and (max-width: 525px) {
+  .app {
+    padding: 0px;
+  }
+}
+
+a:visited {
+  text-decoration: none;
+  color: var(--greyed-out);
+}
+a:link,
+a:active {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: #eb1a24;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+}
+
+#static-title {
+  color: var(--nc-red);
+  text-decoration: underline 0.12em var(--nc-red-transparent);
+  transition: text-decoration-color 300ms;
+}
+#static-title:hover {
+  text-decoration-color: var(--nc-red);
 }
 
 .static-header {
@@ -20,14 +70,10 @@
   flex-wrap: wrap;
 }
 
-/* .static-title {
-
-} */
-
 #logged-in-user-card {
   display: flex;
   align-items: center;
-  border: 1px rgb(66, 63, 63) solid;
+  border: 1px rgb(131, 123, 123) solid;
   border-radius: 5px;
   padding: 5px;
 }
@@ -40,6 +86,7 @@
 .user-avatar {
   width: 20px;
   border-radius: 50%;
+  filter: grayscale(1);
 }
 
 .static-nav {
@@ -54,8 +101,12 @@
   background-color: var(--nc-red);
 }
 
+#filter-bar-text {
+  color: white;
+}
+
 #articles-list {
-  background-color: lightgray;
+  background-color: var(--nc-grey);
   min-width: 300px;
 }
 
@@ -70,6 +121,8 @@
 
 .article-card-creation-details {
   text-align: left;
+  color: var(--greyed-out);
+  font-size: 0.75em;
 }
 
 .article-card-title {
@@ -80,28 +133,80 @@
 
 .article-card-engagement-details {
   text-align: left;
+  color: var(--greyed-out);
 }
 
 #article-page {
+  justify-content: center;
+  background-color: var(--nc-grey);
 }
 
 #article-back-button {
   min-height: 30px;
-  background-color: whitesmoke;
+  background-color: var(--nc-darkgrey);
+}
+
+#article {
+  margin: auto;
+  justify-content: center;
+  width: 70vw;
+  max-width: 700px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 500px) {
+  #article {
+    width: fit-content;
+  }
 }
 
 #article-main {
   text-align: left;
 }
-#article-creation-deta {
+#article-creation-details {
   text-align: left;
+  color: var(--greyed-out);
 }
 #article-title {
   text-align: left;
 }
 #article-body {
   text-align: left;
+  line-height: 1.5;
 }
+
 #article-comment-count {
   text-align: left;
+  color: var(--greyed-out);
+}
+
+.vote-box {
+  display: flex;
+  justify-content: space-between;
+  max-width: 75px;
+  align-items: center;
+}
+
+.vote-button {
+  border-color: var(--reddit-bluegrey);
+  border-radius: 2px;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  background-color: white;
+}
+
+.vote-button:disabled {
+  filter: grayscale(1);
+  opacity: 0.5;
+}
+
+.vote-count {
+  font-size: 1.1em;
+}
+
+.vote-error-message {
+  color: #eb1a24;
 }

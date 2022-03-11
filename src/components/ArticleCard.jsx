@@ -7,11 +7,11 @@ export default function ArticleCard({ article }) {
     <Link to={`/article/${article_id}`}>
       <section className="article-card">
         <div className="article-card-creation-details">
-          <strong>#{topic} </strong>
-          <span>posted by {author} </span>
-          <span>at {created_at}</span>
+          <strong>{topic} • </strong>
+          <span>posted by {author} | </span>
+          <span> {created_at}</span>
         </div>
-        <h3 className="article-card-title">{title}</h3>
+        <h4 className="article-card-title">{title}</h4>
         <div className="article-card-engagement-details">
           <span>votes: {votes} </span>
           <span>comments: {comment_count} </span>
