@@ -206,3 +206,7 @@ h4 {
 .vote-count {
   font-size: 1.1em;
 }
+
+.vote-error-message {
+  color: #eb1a24;
+}
