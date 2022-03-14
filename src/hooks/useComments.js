@@ -13,5 +13,5 @@ export default function useComments(article_id) {
     });
   }, []);
 
-  return { comments, isLoading };
+  return { comments, isLoading, setComments };
 }

@@ -26,11 +26,21 @@ export const patchVotes = async (id, inc_votes) => {
   const response = await axios.patch(`${baseURL}/articles/${id}`, {
     inc_votes,
   });
+  return response.data.article;
 };
 
 export const getComments = async (id) => {
   const response = await axios.get(`${baseURL}/articles/${id}/comments`);
   return response.data.comments;
+};
+
+export const postComment = async (id, username, body) => {
+  const request = { username, body };
+  const response = await axios.post(
+    `${baseURL}/articles/${id}/comments`,
+    request
+  );
+  return response.data.createdComment;
 };
 
 export const getUsers = async () => {

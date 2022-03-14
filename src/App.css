@@ -177,6 +177,12 @@ h4 {
   line-height: 1.5;
 }
 
+#article-engagement-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 #article-comment-count {
   text-align: left;
   color: var(--greyed-out);
@@ -205,6 +211,8 @@ h4 {
 
 .vote-count {
   font-size: 1.1em;
+  margin-left: 7px;
+  margin-right: 7px;
 }
 
 .vote-error-message {
@@ -233,4 +241,22 @@ h4 {
 .comment-vote-box {
   text-align: left;
   color: var(--greyed-out);
+}
+
+#comment-post {
+  margin-top: 20px;
+  text-align: left;
+  margin-bottom: 35px;
+}
+
+#comment-textbox {
+  width: 100%;
+}
+
+#comment-submit {
+  width: 100%;
+}
+
+#comment-error-message {
+  color: #eb1a24;
 }

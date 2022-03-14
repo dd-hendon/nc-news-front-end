@@ -8,7 +8,7 @@ import Articles from "./components/Articles";
 import ArticlePage from "./components/ArticlePage";
 
 function App() {
-  const [loggedInUser, setLoggedInUser] = useState("test-user");
+  const [loggedInUser, setLoggedInUser] = useState("jessjelly");
 
   return (
     <UserContext.Provider value={{ loggedInUser, setLoggedInUser }}>
