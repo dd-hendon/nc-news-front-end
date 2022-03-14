@@ -10,7 +10,7 @@ export default function CommentPost({ article_id, comments, setComments }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     setErr(null);
-    const newComment = {
+    const tempComment = {
       author: loggedInUser,
       body: commentInput,
       created_at: "just now",
@@ -18,7 +18,7 @@ export default function CommentPost({ article_id, comments, setComments }) {
     };
     setComments((currentComments) => {
       const tempComments = [...currentComments];
-      tempComments.unshift(newComment);
+      tempComments.unshift(tempComment);
       return tempComments;
     });
     postComment(article_id, loggedInUser, commentInput)
