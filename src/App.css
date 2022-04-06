@@ -277,12 +277,17 @@ h4 {
   text-align: left;
   color: var(--greyed-out);
   font-size: 0.75em;
+  margin-bottom: 5px;
+}
+
+.comment-author-is-user {
+  color: black;
 }
 
 .comment-body {
   text-align: left;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 5px;
   line-height: 1.5;
 }
 
@@ -307,4 +312,15 @@ h4 {
 
 #comment-error-message {
   color: #eb1a24;
+}
+
+.comment-bottom-bar {
+  min-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comment-delete-button {
+  font-size: 00.75rem;
 }

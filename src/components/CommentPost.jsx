@@ -15,6 +15,7 @@ export default function CommentPost({ article_id, comments, setComments }) {
       body: commentInput,
       created_at: "just now",
       votes: 0,
+      isTempComment: true,
     };
     setComments((currentComments) => {
       const tempComments = [...currentComments];

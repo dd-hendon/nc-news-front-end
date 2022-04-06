@@ -35,6 +35,10 @@ export const postComment = async (id, username, body) => {
   return response.data.createdComment;
 };
 
+export const deleteComment = async (id) => {
+  await axios.delete(`${baseURL}/comments/${id}`);
+};
+
 export const getUsers = async () => {
   const response = await axios.get(`${baseURL}/users`);
   return response.data.users;
