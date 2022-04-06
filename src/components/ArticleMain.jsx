@@ -1,12 +1,9 @@
 import { useState } from "react";
-import useArticle from "../hooks/useArticle";
+
 import VoteBox from "./VoteBox";
 
-export default function ArticleMain({ article_id }) {
-  const { article, isLoading } = useArticle(article_id);
+export default function ArticleMain({ article_id, article }) {
   const [voteError, setVoteError] = useState();
-
-  if (isLoading) return <h2>Loading...</h2>;
 
   const { title, topic, author, body, created_at, votes, comment_count } =
     article;

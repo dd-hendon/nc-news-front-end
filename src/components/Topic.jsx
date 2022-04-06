@@ -7,7 +7,7 @@ export default function Topic({ topic }) {
   const { slug } = topic;
   const { selectedTopic } = useContext(TopicContext);
   return (
-    <Link to={`/${slug}`} element={<Articles />}>
+    <Link to={`/topic/${slug}`} element={<Articles />}>
       <strong
         className={selectedTopic === slug ? "selected-topic-link-text" : ""}
       >

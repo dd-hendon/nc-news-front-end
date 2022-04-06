@@ -54,6 +54,14 @@ h4 {
   font-weight: 500;
 }
 
+.error-page-message {
+  margin: 20px;
+  color: var(--nc-red);
+}
+.error-page-body {
+  color: grey;
+}
+
 #static-title {
   color: var(--nc-red);
   text-decoration: underline 0.12em var(--nc-red-transparent);
