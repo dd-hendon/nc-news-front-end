@@ -4,10 +4,10 @@ import { deleteComment } from "../utils/api";
 export default function CommentDelete({
   comment_id,
   setIsDeleted,
-  isTempComment,
+  tempCommentId,
 }) {
   const [err, setErr] = useState(null);
-  const [buttonDisabled, setButtonDisabled] = useState(isTempComment);
+  const [buttonDisabled, setButtonDisabled] = useState(false);
 
   const handleDelete = () => {
     setErr(null);
