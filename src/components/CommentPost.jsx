@@ -15,7 +15,6 @@ export default function CommentPost({ article_id, comments, setComments }) {
       body: commentInput,
       created_at: "just now",
       votes: 0,
-      isTempComment: true,
     };
     setComments((currentComments) => {
       const tempComments = [...currentComments];
@@ -23,8 +22,13 @@ export default function CommentPost({ article_id, comments, setComments }) {
       return tempComments;
     });
     postComment(article_id, loggedInUser, commentInput)
-      .then(() => {
+      .then(({ comment_id }) => {
         setCommentInput("");
+        setComments((currentComments) => {
+          const tempComments = [...currentComments];
+          tempComments[0].comment_id = comment_id;
+          return tempComments;
+        });
       })
       .catch((err) => {
         setComments((currentComments) => {
