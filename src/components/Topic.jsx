@@ -6,7 +6,6 @@ import { useContext } from "react";
 export default function Topic({ topic }) {
   const { slug } = topic;
   const { selectedTopic } = useContext(TopicContext);
-  console.log(selectedTopic);
   return (
     <Link to={`/${slug}`} element={<Articles />}>
       <strong
