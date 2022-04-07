@@ -6,11 +6,13 @@ https://nc-news-dd-hendon.netlify.app/
 
 ## Project Summary
 
-The front end of a reddit style news aggregate website with articles, comments and votes. Styled to match the Northcoders brand. Built using React.
+The front end of a news aggregate website with articles, comments and votes. Built using React.
 
-The hardcoded logged in user can browse articles. These can be filtered by selecting the topic headers. The site header returns to viewing all articles. The filter bar allows for sorting by date, votes and comments. The sort order can be inverted.
+Articles can be filtered by selecting the topic headers. The site header returns to viewing all articles. The filter bar allows for sorting by date, votes and comments. The sort order can be inverted.
 
-Individual articles can be upvoted or downvoted. The user can also leave a comment on the article. The results of voting and commenting are optimistically rendered. Comments associated with the article are displayed below. The user can delete their own comments.
+Articles can be upvoted or downvoted. The user can comment on an article. The results of these actions are optimistically rendered.
+
+Comments associated with the article are displayed below it, and the user can delete their own comments.
 
 Error handling is in place to cover voting, commenting and bad urls.
 
