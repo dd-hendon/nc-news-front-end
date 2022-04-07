@@ -16,7 +16,6 @@ Error handling is in place to cover voting, commenting and bad urls.
 
 ## Back End API
 
-This site requests data from:
 https://github.com/dd-hendon/nc-news
 
 ## Local Version Requirements
