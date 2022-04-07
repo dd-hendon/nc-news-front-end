@@ -9,6 +9,8 @@ export default function CommentCard({ comment }) {
   const { loggedInUser } = useContext(UserContext);
   const isUserComment = loggedInUser === author;
   const [isDeleted, setIsDeleted] = useState(false);
+  let createdAt =
+    created_at === "just now" ? "just now" : formatDate(created_at);
 
   if (isDeleted) return <p>Comment deleted</p>;
 
@@ -18,7 +20,7 @@ export default function CommentCard({ comment }) {
         <strong className={isUserComment ? "comment-author-is-user" : ""}>
           {author}
         </strong>
-        <span> | {formatDate(created_at)}</span>
+        <span> | {createdAt}</span>
       </section>
       <p className="comment-body">{body}</p>
       <section className="comment-bottom-bar">
