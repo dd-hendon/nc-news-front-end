@@ -1,5 +1,6 @@
 import { UserContext } from "../contexts/UserContext";
 import { useContext, useState } from "react";
+import formatDate from "../utils/formatDate";
 import CommentDelete from "./CommentDelete";
 
 export default function CommentCard({ comment }) {
@@ -17,7 +18,7 @@ export default function CommentCard({ comment }) {
         <strong className={isUserComment ? "comment-author-is-user" : ""}>
           {author}
         </strong>
-        <span> | {created_at}</span>
+        <span> | {formatDate(created_at)}</span>
       </section>
       <p className="comment-body">{body}</p>
       <section className="comment-bottom-bar">

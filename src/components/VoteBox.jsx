@@ -1,5 +1,5 @@
-import upvote from "../assets/NC-UPVOTE.jpg";
-import downvote from "../assets/NC-DOWNVOTE.jpg";
+import upvote from "../assets/nc-upvote.jpg";
+import downvote from "../assets/nc-downvote.jpg";
 import { useState } from "react";
 import { patchVotes } from "../utils/api";
 

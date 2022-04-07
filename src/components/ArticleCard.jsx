@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import formatDate from "../utils/formatDate";
 
 export default function ArticleCard({ article }) {
   const { article_id, author, comment_count, created_at, title, topic, votes } =
@@ -9,7 +10,7 @@ export default function ArticleCard({ article }) {
         <div className="article-card-creation-details">
           <strong>{topic} • </strong>
           <span>posted by {author} | </span>
-          <span> {created_at}</span>
+          <span> {formatDate(created_at)}</span>
         </div>
         <h4 className="article-card-title">{title}</h4>
         <div className="article-card-engagement-details">

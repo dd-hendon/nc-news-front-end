@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import formatDate from "../utils/formatDate";
 import VoteBox from "./VoteBox";
 
 export default function ArticleMain({ article_id, article }) {
@@ -13,7 +13,7 @@ export default function ArticleMain({ article_id, article }) {
       <section id="article-creation-details">
         <strong>#{topic} </strong>
         <span>posted by {author} </span>
-        <span>at {created_at}</span>
+        <span>at {formatDate(created_at)}</span>
       </section>
       <h3 id="article-title">{title}</h3>
       <p id="article-body">{body}</p>
