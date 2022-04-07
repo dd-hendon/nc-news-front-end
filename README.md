@@ -18,7 +18,8 @@ Error handling is in place to cover voting, commenting and bad urls.
 
 ## Back End API
 
-https://github.com/dd-hendon/nc-news
+- Built using Express and PostgreSQL 
+- https://github.com/dd-hendon/nc-news-back-end.git
 
 ## Local Version Requirements
 
