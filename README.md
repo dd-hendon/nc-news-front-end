@@ -2,7 +2,7 @@
 
 ## Deployed Site
 
-https://nc-news-dd-hendon.netlify.app/
+~~https://nc-news-dd-hendon.netlify.app/~~ (Down due to heroku removal of free tier)
 
 ## Project Summary
 
